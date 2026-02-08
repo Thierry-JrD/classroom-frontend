@@ -14,12 +14,6 @@ import { useMemo, useState } from "react";
 
 const SubjectsList = () => {
 
-    /* Temporal line
-    const { result } = useList({ resource: "subjects", });
-    console.log("Subjects data:", result?.data);
-    console.log("Total subjects:", result?.total);
-    // Temporal line */
-
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedDepartment, setSelectedDepartment] = useState('all');
 
@@ -60,7 +54,7 @@ const SubjectsList = () => {
             header: () => <p className="column-title">Description</p>,
             cell: ({ getValue }) => (<span className="truncate line-clamp-2">{getValue<string>()}</span>),
         }
-    ], []); // Debugging.......
+    ], []);
 
     const subjectTable = useTable<Subject>({
         columns: subjectColumns,
