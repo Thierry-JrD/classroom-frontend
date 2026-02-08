@@ -17,5 +17,3 @@ export const dataProvider: DataProvider = {
 
     getApiUrl: () => '',
 }
-
-// console.log("Data:", dataProvider.getList({ resource: "subjects" })); // Verification of fetching Data responce
