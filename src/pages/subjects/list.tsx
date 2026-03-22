@@ -58,10 +58,10 @@ const SubjectsList = () => {
             resource: 'subjects',
             pagination: { pageSize: 10, mode: 'server' },
             filters: {
-                permanent: [...departementFilters],
+                permanent: [...departementFilters, ...searchFilters],
             },
             sorters: {
-                initial: { field: 'id', order: 'desc' }
+                initial: [{ field: 'id', order: 'desc' }]
             },
         }
     });

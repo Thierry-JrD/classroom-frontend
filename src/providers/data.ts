@@ -3,7 +3,7 @@ import { BaseRecord, DataProvider, GetListParams, GetListResponse } from "@refin
 
 export const dataProvider: DataProvider = {
     getList: async <TData extends BaseRecord = BaseRecord>({ resource }: GetListParams): Promise<GetListResponse<TData>> => {
-        if (resource !== 'subjects') return { data: data as TData[], total: 0 }
+        if (resource !== 'subjects') return { data: [] as TData[], total: 0 }
         return {
             data: MOCK_SUBJECTS as unknown as TData[],
             total: MOCK_SUBJECTS.length

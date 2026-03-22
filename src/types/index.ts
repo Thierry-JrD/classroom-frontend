@@ -1,8 +1,8 @@
 export type Subject = {
-    id: Number,
-    name: String,
-    code: String,
-    description: String,
-    department: String,
-    createdAt: String,
+    id: number,
+    name: string,
+    code: string,
+    description: string,
+    department: string,
+    createdAt: string,
 };
